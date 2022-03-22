@@ -1,7 +1,7 @@
 import { BrowserRouter } from 'react-router-dom';
 import { Routes, Route, NavLink, Navigate } from 'react-router-dom';
 import logo from '../assets/Logo.png';
-import { LazyPage1, LazyPage2, LazyPage3 } from '../pages';
+import { LazyPage1, LazyPage2, LazyPage3 } from '../moduloComanda/pages';
 
 
 export const Navigation = () => {
