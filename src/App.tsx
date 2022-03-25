@@ -1,9 +1,10 @@
-import { Navigation } from "./routes/Navigation";
+import { AppRouter } from "./moduloComanda/router/AppRouter";
+// import { Navigation } from "./routes/Navigation";
 
-function App() {
+export const App = () => {
   return (
     <>
-      <Navigation />
+      <AppRouter />
     </>
   );
 }

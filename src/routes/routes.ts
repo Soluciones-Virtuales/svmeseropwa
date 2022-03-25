@@ -1,5 +1,7 @@
 import { lazy, LazyExoticComponent } from "react";
-import { NoLazy } from "../moduloComanda/pages/NoLazy";
+import LoginScreen from "../moduloAuth/pages/LoginScreen";
+import { AuthRouter } from "../moduloAuth/router/AuthRouter";
+// import { NoLazy } from "../moduloComanda/pages/NoLazy";
 
 type JSXComponent = () => JSX.Element;
 
@@ -17,12 +19,12 @@ export const routes: Route[] = [
         path: '/lazyload/*', 
         to: '/lazyload', 
         Component: LazyLayout, 
-        name: 'Lazy-Dashboard'
+        name: 'JournalScreen'
     }, 
     {
-        to: '/no-lazy', 
-        path: 'no-lazy', 
-        Component: NoLazy, 
-        name: 'No Lazy'
+        path: '/auth/*', 
+        to: '/auth', 
+        Component: AuthRouter, 
+        name: 'AuthRouter - No Lazy'
     }
 ]

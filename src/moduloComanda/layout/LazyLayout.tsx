@@ -4,17 +4,17 @@ import { LazyPage1, LazyPage2, LazyPage3 } from "../pages";
 export const LazyLayout = () => {
     return (
         <div>
-            <h1>LazyLayout Page</h1>
+            <h1>LazyLayout Page - JournalScreen</h1>
 
             <ul>
-                <li>
-                    <NavLink to="lazy1">Lazy 1</NavLink>
+                <li style={{ color: 'white' }}>
+                    <NavLink to="lazy1" className={ ({ isActive }) => isActive ? 'nav-active' : 'nav-noActive' }>Main Comandas Screen</NavLink>
                 </li>
                 <li>
-                    <NavLink to="lazy2">Lazy 2</NavLink>
+                    <NavLink to="lazy2" className={ ({ isActive }) => isActive ? 'nav-active' : 'nav-noActive' }>Comanda Screen</NavLink>
                 </li>
                 <li>
-                    <NavLink to="lazy3">Lazy 3</NavLink>
+                    <NavLink to="lazy3" className={ ({ isActive }) => isActive ? 'nav-active' : 'nav-noActive' }>Configuración</NavLink>
                 </li>
             </ul>
 

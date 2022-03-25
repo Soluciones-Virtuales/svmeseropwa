@@ -1,10 +1,10 @@
 import { Suspense } from 'react';
 import { BrowserRouter } from 'react-router-dom';
 import { Routes, Route, NavLink, Navigate } from 'react-router-dom';
-import logo from '../assets/Logo.png';
-import { routes } from './routes';
+import logo from '../../assets/Logo.png';
+import { routes } from '../../routes/routes';
 
-export const Navigation = () => {
+export const AppRouter = () => {
     return (
         <Suspense fallback={ <span>Cargando...</span> }>
 
@@ -38,7 +38,8 @@ export const Navigation = () => {
                             ))
                         }
                         
-                        <Route path="/*" element={ <Navigate to={ routes[0].to } replace /> } />
+                        {/* <Route path="/*" element={ <Navigate to={ routes[0].to } replace /> } /> */}
+                        <Route path="/*" element={ <Navigate replace to="lazyload" /> } />
                     </Routes>
 
                 </div>
