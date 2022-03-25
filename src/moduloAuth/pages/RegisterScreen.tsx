@@ -1,45 +1,64 @@
 import { Formik, Form } from 'formik';
 import * as Yup from 'yup';
-import { MyTextInput } from '../../components';
+import { MySelect, MyTextInput } from '../../components';
+
+import formAuth from '../data-fields.json';
+import useValidations from '../hooks/useValidations';
 
 
 export const RegisterScreen = () => {
+
+    const { initialValues, validationSchema} = useValidations();
+
     return (
         <div>
             <h1>RegisterScreen</h1>
 
             <Formik
-                initialValues={{
-                    name: '', 
-                    email: '' 
-                }}
+                initialValues={ initialValues }
                 onSubmit={ ( values ) => {
+
                     console.log( values )
+                    
                 }}
-                validationSchema={ Yup.object({
-                    name: Yup.string()
-                            .max(40, 'No debe tener mas de 40 caracteres')
-                            .required('Obligatorio'), 
-                    email: Yup.string()
-                            .email('El correo no tiene un formato válido')
-                            .required('Requerido')
-                    })
-            }>
+                validationSchema={ validationSchema }
+            >
 
                 {(formik) => (
-                    <Form>
+                    <Form noValidate>
+                        {
+                            formAuth.map( ({ type, name, placeholder, label, options }) => {
 
-                        <MyTextInput 
-                            label="Nombre" 
-                            name="name" 
-                            placeholder="Escriba el nombre completo"
-                        />
-                        <MyTextInput 
-                            label="Correo" 
-                            name="email" 
-                            placeholder="Escriba su correo electrónico"
-                        />
-    
+                                if ( type === 'input' || type === 'password' || type === 'email' ) {
+                                    return (
+                                        <MyTextInput 
+                                            key={ name }
+                                            type={(type as any)}
+                                            name={ name } 
+                                            label={ label } 
+                                            placeholder={ placeholder }
+                                        />
+                                    )
+                                } else if ( type === 'select' ) {
+                                    return (
+                                        <MySelect 
+                                            key={ name }
+                                            label={ label }
+                                            name={ name }
+                                        >
+                                            <option value="">Seleccione el país</option>
+                                            {
+                                                options?.map(({ id, label }) => (
+                                                    <option key={ id } value={ id }>{ label }</option>
+                                                ))
+                                            }
+                                        </MySelect>
+                                    )
+                                }
+
+                            })
+                        }
+
                         <button type="submit">Registrarse</button>
 
                     </Form>

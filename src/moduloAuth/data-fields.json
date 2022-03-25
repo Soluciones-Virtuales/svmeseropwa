@@ -1,0 +1,102 @@
+[
+    {
+        "type": "input", 
+        "name": "name", 
+        "placeholder": "Escriba el nombre completo", 
+        "label": "Nombre", 
+        "value": "", 
+        "validations": [
+            {
+                "type": "required", 
+                "description": "Obligatorio"
+            }, 
+            {
+                "type": "minLength", 
+                "value": 5, 
+                "description": "No debe tener menos de 5 caracteres."
+            }, 
+            {
+                "type": "maxLength", 
+                "value": 40, 
+                "description": "No debe tener mas de 40 caracteres."
+            }
+        ]
+    }, 
+    {
+        "type": "email", 
+        "name": "email", 
+        "placeholder": "Escriba su correo electrónico", 
+        "label": "Correo", 
+        "value": "", 
+        "validations": [
+            {
+                "type": "required", 
+                "description": "Obligatorio"
+            }, 
+            {
+                "type": "email", 
+                "description": "El correo no tiene un formato válido."
+            }
+        ]
+    }, 
+    {
+        "type": "password", 
+        "name": "password1", 
+        "placeholder": "******", 
+        "label": "Contraseña", 
+        "value": "", 
+        "validations": [
+            {
+                "type": "required", 
+                "description": "Obligatorio"
+            }, 
+            {
+                "type": "minLength", 
+                "value": 6, 
+                "description": "No debe tener menos de 6 caracteres."
+            }
+        ]
+    }, 
+    {
+        "type": "password", 
+        "name": "password2", 
+        "placeholder": "******", 
+        "label": "Confirme su contraseña", 
+        "value": "", 
+        "validations": [
+            {
+                "type": "required", 
+                "description": "Obligatorio"
+            }, 
+            {
+                "type": "minLength", 
+                "value": 6, 
+                "description": "No debe tener menos de 6 caracteres."
+            }, 
+            {
+                "type": "comparePassword", 
+                "description": "Las contraseñas no coinciden."
+            }
+        ]
+    }, 
+    {
+        "type": "select", 
+        "name": "pais", 
+        "label": "País", 
+        "value": "", 
+        "options": [
+            {
+                "id": 1, 
+                "label": "Honduras"
+            }, 
+            {
+                "id": 2, 
+                "label": "México"
+            }, 
+            {
+                "id": 3, 
+                "label": "Guatemala"
+            }
+        ]
+    }
+]
