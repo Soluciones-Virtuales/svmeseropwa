@@ -2,7 +2,7 @@
     {
         "type": "input", 
         "name": "name", 
-        "placeholder": "Escriba el nombre completo", 
+        "placeholder": "Escriba su nombre completo", 
         "label": "Nombre", 
         "value": "", 
         "validations": [
@@ -99,4 +99,6 @@
             }
         ]
     }
+    
 ]
+

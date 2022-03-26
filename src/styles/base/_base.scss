@@ -3,6 +3,13 @@
     margin: 0px;
 }
 
+:root {
+    --bg-white: rgba(255,255,255,0.5);
+    --br: 5px;
+    --border: solid 1px rgba(255,255,255,0.5);
+    --ancho-container: 280px
+}
+
 html, body {
     height: 100vh;
     width: 100vw;

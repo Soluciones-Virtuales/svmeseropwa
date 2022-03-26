@@ -1,10 +1,13 @@
-import formAuth from '../data-fields.json';
+import dataMenu from '../fields-auth.json';
 import * as Yup from 'yup';
 
-const useValidations = () => {
-            
+const useValidations = ({formulario}:any) => {
+
+    const formAuth = dataMenu.filter( item => item.form === formulario);
+
     const initialValues: { [key: string]: any } = {};
     const requiredFields: { [key: string]: any } = {};
+
 
     for (const input of formAuth) {
         initialValues[ input.name ] = input.value;
@@ -38,9 +41,8 @@ const useValidations = () => {
                 schema = schema.oneOf([ Yup.ref('password1') ], rule.description )
             }
         }
-
         requiredFields[input.name] = schema;
-    }
+    } 
 
     const validationSchema = Yup.object({ ...requiredFields });
 

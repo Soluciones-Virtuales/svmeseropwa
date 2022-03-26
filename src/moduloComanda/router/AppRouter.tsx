@@ -1,7 +1,6 @@
 import { Suspense } from 'react';
 import { BrowserRouter } from 'react-router-dom';
 import { Routes, Route, NavLink, Navigate } from 'react-router-dom';
-import logo from '../../assets/Logo.png';
 import { routes } from '../../routes/routes';
 
 export const AppRouter = () => {
@@ -10,9 +9,9 @@ export const AppRouter = () => {
 
             <BrowserRouter>
             
-                <div className="main-layout">
-                    <nav>
-                        <img src={ logo } alt="SVMesero" />
+                {/* <div className="main-layout"> */}
+                <div>
+                    {/* <nav>
                         <ul>
                             {
                                 routes.map( ({ to, name}) => (
@@ -25,7 +24,7 @@ export const AppRouter = () => {
                             }
 
                         </ul>
-                    </nav>
+                    </nav> */}
 
                     <Routes>
                         {

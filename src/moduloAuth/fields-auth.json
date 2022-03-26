@@ -1,0 +1,123 @@
+[
+    {
+        "form": "formAuthReg", 
+        "type": "input", 
+        "name": "name", 
+        "placeholder": "Escriba su nombre completo", 
+        "label": "Nombre", 
+        "value": "", 
+        "validations": [
+            {
+                "type": "required", 
+                "description": "Obligatorio"
+            }, 
+            {
+                "type": "minLength", 
+                "value": 5, 
+                "description": "No debe tener menos de 5 caracteres."
+            }, 
+            {
+                "type": "maxLength", 
+                "value": 40, 
+                "description": "No debe tener mas de 40 caracteres."
+            }
+        ]
+    }, 
+    {
+        "form": "formAuthReg", 
+        "type": "email", 
+        "name": "email", 
+        "placeholder": "Escriba su correo electrónico", 
+        "label": "Correo", 
+        "value": "", 
+        "validations": [
+            {
+                "type": "required", 
+                "description": "Obligatorio"
+            }, 
+            {
+                "type": "email", 
+                "description": "El correo no tiene un formato válido."
+            }
+        ]
+    }, 
+    {
+        "form": "formAuthReg", 
+        "type": "password", 
+        "name": "password1", 
+        "placeholder": "******", 
+        "label": "Contraseña", 
+        "value": "", 
+        "validations": [
+            {
+                "type": "required", 
+                "description": "Obligatorio"
+            }, 
+            {
+                "type": "minLength", 
+                "value": 6, 
+                "description": "No debe tener menos de 6 caracteres."
+            }
+        ]
+    }, 
+    {
+        "form": "formAuthReg", 
+        "type": "password", 
+        "name": "password2", 
+        "placeholder": "******", 
+        "label": "Confirme su contraseña", 
+        "value": "", 
+        "validations": [
+            {
+                "type": "required", 
+                "description": "Obligatorio"
+            }, 
+            {
+                "type": "minLength", 
+                "value": 6, 
+                "description": "No debe tener menos de 6 caracteres."
+            }, 
+            {
+                "type": "comparePassword", 
+                "description": "Las contraseñas no coinciden."
+            }
+        ]
+    }, 
+    {
+        "form": "formAuthLog", 
+        "type": "email", 
+        "name": "email", 
+        "placeholder": "Escriba su correo electrónico", 
+        "label": "Correo", 
+        "value": "", 
+        "validations": [
+            {
+                "type": "required", 
+                "description": "Obligatorio"
+            }, 
+            {
+                "type": "email", 
+                "description": "El correo no tiene un formato válido."
+            }
+        ]
+    }, 
+    {
+        "form": "formAuthLog", 
+        "type": "password", 
+        "name": "password1", 
+        "placeholder": "******", 
+        "label": "Contraseña", 
+        "value": "", 
+        "validations": [
+            {
+                "type": "required", 
+                "description": "Obligatorio"
+            }, 
+            {
+                "type": "minLength", 
+                "value": 6, 
+                "description": "No debe tener menos de 6 caracteres."
+            }
+        ]
+    }
+]

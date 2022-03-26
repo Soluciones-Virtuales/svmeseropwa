@@ -1,4 +1,6 @@
-
+h1 {
+    color: $secundary;
+}
 .auth__main {
     align-items: center;
     background-color: $primary;
@@ -10,12 +12,14 @@
 }
 
 .auth__box_container {
-    background-color: white;
-    box-shadow: 0px 3px $dark-grey;
-    border-radius: 2px;
+    background-color: var(--bg-white);
+    backdrop-filter: blur(3px);
+    border: var(--border);
+    border-radius: var(--br);
     padding: 20px;
-    width: 280px;
+    width: var(--ancho-container);
     color: $primary;
+    box-shadow: -1px 2px 5px 3px rgba(255,255,0,0.6);
 }
 
 .auth__input {
@@ -23,7 +27,7 @@
     font-size: large;
     margin-bottom: 8px;
     outline: none;
-    padding: 10px;
+    padding: 5px;
 }
 
 .auth__input_error {
@@ -46,4 +50,54 @@ span, .error-message {
     font-style: italic;
     font-size: 75%;
     margin-bottom: 8px;
+}
+
+.auth__franjaSuperior {
+    position: absolute;
+    top: 0;
+    width: 100vw;
+    height: 18%;
+    background-color: $secundary;
+}
+
+.auth__logo {
+    position: absolute;
+    top: 0;
+    left: -1px;
+    height: 22%;   
+}
+
+.auth__imagen {
+    height: 72%;
+    width: 82%;
+    transform: scaleX(-1);
+    border-right: 1px solid yellowgreen;
+    border-top: 1px solid yellowgreen;
+    border-left: 2px solid $secundary;
+    border-bottom: 2px solid $secundary;
+}
+
+.auth__boton {
+    height: 40px;
+    font-size: large; 
+    background-color: $primary;
+    font-weight: bold; 
+    width: var(--ancho-container);
+}
+
+.auth__link {
+    text-decoration: none;
+    font-size: medium;
+    font-style: normal;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+.auth__link:hover {
+    color: $secundary;
+    font-weight: 700;
+    text-decoration: underline;
+    box-shadow: 0 2px 0 0 rgba(0,50,0,.062);
+    transition: box-shadow .2s ease;
+    cursor: pointer;
 }
