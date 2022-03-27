@@ -1,5 +1,9 @@
 h1 {
     color: $secundary;
+    font-size: 20px;
+    font-family: 'Titillium Web', sans-serif;
+    font-weight: 900;
+    padding: 0.3em 0.1em;
 }
 .auth__main {
     align-items: center;
@@ -8,18 +12,35 @@ h1 {
     justify-content: center;
     margin: 0px;
     height: 100vh;
-    width: 100vw;
+    width: var(--ancho-main);
 }
 
 .auth__box_container {
-    background-color: var(--bg-white);
     backdrop-filter: blur(3px);
-    border: var(--border);
+    background-color: var(--bg-white);
     border-radius: var(--br);
-    padding: 20px;
-    width: var(--ancho-container);
-    color: $primary;
+    border: var(--border);
     box-shadow: -1px 2px 5px 3px rgba(255,255,0,0.6);
+    color: $primary;
+    margin-left: 32%;
+    max-width: 350px;
+    padding: 5px;
+    position: relative;
+    width: 55%;
+    z-index: 999;
+}
+
+.auth__imagen {
+    position: fixed;
+    height: 72%;
+    // width: 95vw;
+    width: 95%;
+    max-width: 1400px;
+    transform: scaleX(-1);
+    border-right: 1px solid yellowgreen;
+    border-top: 1px solid yellowgreen;
+    border-left: 2px solid $secundary;
+    border-bottom: 2px solid $secundary;
 }
 
 .auth__input {
@@ -43,6 +64,8 @@ h1 {
 .auth__label {
     color: $dark-grey;
     font-weight: bold;
+    font-size: 16px;
+    padding: 0.4em 0.1em;
 }
 
 span, .error-message {
@@ -53,7 +76,8 @@ span, .error-message {
 }
 
 .auth__franjaSuperior {
-    position: absolute;
+    position: fixed;
+    // position: absolute;
     top: 0;
     width: 100vw;
     height: 18%;
@@ -61,28 +85,27 @@ span, .error-message {
 }
 
 .auth__logo {
-    position: absolute;
-    top: 0;
-    left: -1px;
-    height: 22%;   
-}
-
-.auth__imagen {
-    height: 72%;
-    width: 82%;
-    transform: scaleX(-1);
-    border-right: 1px solid yellowgreen;
-    border-top: 1px solid yellowgreen;
-    border-left: 2px solid $secundary;
-    border-bottom: 2px solid $secundary;
+    position: fixed;
+    left: 36vw;
+    top: -5px;
+    height: 15%;
+    max-height: 15%;
 }
 
 .auth__boton {
     height: 40px;
-    font-size: large; 
     background-color: $primary;
-    font-weight: bold; 
-    width: var(--ancho-container);
+    width: 100%;
+    border: none;
+    font-family: 'Titillium Web', sans-serif;
+    font-size: large; 
+    font-weight: bold;
+    padding: 0.3em 1em;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.auth__boton:hover {
+    filter: brightness(130%);
 }
 
 .auth__link {
@@ -100,4 +123,61 @@ span, .error-message {
     box-shadow: 0 2px 0 0 rgba(0,50,0,.062);
     transition: box-shadow .2s ease;
     cursor: pointer;
+}
+
+
+
+@media all and (min-width: 900px) {
+    h1 {
+        font-size: 30px;
+        font-family: 'Titillium Web', sans-serif;
+        font-weight: 900;
+    }
+
+    .auth__box_container {
+        margin-left: 65%;
+    }
+
+    .auth__boton {
+        font-size: larger; 
+    }
+
+    .auth__label {
+        font-size: 20px;
+    }
+
+    .auth__logo {
+        left: 45vw;
+    }
+}
+
+
+@media (orientation: landscape) and (max-width: 896px) {
+// @media (orientation: landscape) and (min-width: 668px) {
+    h1 {
+        font-size: 20px;
+        font-weight: 700;
+    }
+ 
+    .auth__label {
+        font-size: 14px;
+        padding-bottom: 0;
+    }
+
+    .auth__input, .auth__input_error {
+        height: 12px;
+        // font-size: large;
+        margin-bottom: 2px;
+    }
+
+    .auth__boton {
+        height: 30px;
+        font-size: medium; 
+    }
+
+    .auth__link {
+        font-size: small;
+        margin-top: 5px;
+    }
+
 }

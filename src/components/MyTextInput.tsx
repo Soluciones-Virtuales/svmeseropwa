@@ -15,8 +15,8 @@ export const MyTextInput = ( { label, ...props }: Props ) => {
         <div
             style={{
                 display: 'flex', 
-                flexDirection: 'column'
-
+                flexDirection: 'column', 
+                marginTop: -8
             }}
         >
             <label className="auth__label" htmlFor={ props.id || props.name } >{ label }</label>
