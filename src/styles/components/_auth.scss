@@ -101,6 +101,7 @@ span, .error-message {
     font-size: large; 
     font-weight: bold;
     padding: 0.3em 1em;
+    margin: -5px 0 0 0;
     border-radius: 5px;
     cursor: pointer;
 }
@@ -127,23 +128,66 @@ span, .error-message {
 
 
 
-@media all and (min-width: 900px) {
+@media (orientation: landscape)  {
+    h1 {
+        font-size: 18px;
+        padding: 0;
+        margin: 0;
+        margin-bottom: 3px;
+    }
+
+    .auth__box_container {
+        margin-left: 42%;
+        margin-top: -2px;
+        padding: 0 5px 0 5px;
+    }
+
+    .auth__label {
+        font-size: 14px;
+        padding-top: 1px;
+        padding-bottom: 0;
+    }
+
+    .auth__input {
+        font-size: 0.8em;
+        margin-bottom: 5px;
+        padding: 3px;
+    }
+
+    .auth__input_error {
+        font-size: 0.8em;
+        margin-bottom: 5px;
+        padding: 5px;
+    }
+            
+    .auth__boton {
+        height: 30px;
+        font-size: 17px; 
+        padding: 0;
+        margin: -3px 0 -5px 0;
+    }
+
+    .auth__link {
+        font-size: small;
+        margin-top: 5px;
+    }
+}
+
+@media all and (min-width: 760px) {
     h1 {
         font-size: 30px;
         font-family: 'Titillium Web', sans-serif;
         font-weight: 900;
+        margin-bottom: 5px;
     }
 
     .auth__box_container {
-        margin-left: 65%;
-    }
-
-    .auth__boton {
-        font-size: larger; 
+        // margin-left: 52%;
+        margin-left: 65vw;
     }
 
     .auth__label {
-        font-size: 20px;
+        margin-top: 5px;
     }
 
     .auth__logo {
@@ -151,33 +195,3 @@ span, .error-message {
     }
 }
 
-
-@media (orientation: landscape) and (max-width: 896px) {
-// @media (orientation: landscape) and (min-width: 668px) {
-    h1 {
-        font-size: 20px;
-        font-weight: 700;
-    }
- 
-    .auth__label {
-        font-size: 14px;
-        padding-bottom: 0;
-    }
-
-    .auth__input, .auth__input_error {
-        height: 12px;
-        // font-size: large;
-        margin-bottom: 2px;
-    }
-
-    .auth__boton {
-        height: 30px;
-        font-size: medium; 
-    }
-
-    .auth__link {
-        font-size: small;
-        margin-top: 5px;
-    }
-
-}
